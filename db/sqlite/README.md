@@ -6,15 +6,18 @@ Library that used
  Database : user
  Tables :
 
->> Create table
- user
+# Create table
+```sql
+user
  ------
  user_id | int
  name | string
  sex | string
  age | int
  ------
->> Alter
+```
+# Alter
+```sql
 user
  ------
  user_id | int | primary | auto increment
@@ -24,16 +27,21 @@ user
  hobby | string | nullable
  occupation | string | nullable
  ------
->> Insert
+```
+# Insert
+```sql
+------
 Fakih | Male   | 17 | Swimming | Swimmer
 Hikaf | Female | 16 | - | Office Assistant
 Kafhi | Male   | 11 | Jogging | -
 Fhika | Female | 20 | - | -
 Ikfha | Female | 55 | - | -
->> Update
+------
+```
+# Update
 Update Female Hobby to be all Swimming
->> Delete
+# Delete
 Delete Ikfha
->> Select
+# Select
 List all user that have age < 20 
 List all user that have age > 20
