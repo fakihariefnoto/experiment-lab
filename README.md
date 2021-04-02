@@ -1,4 +1,4 @@
-List of my experiment with library
+List of my experiment with library, maybe only for Go Language
 
 - Database
 - Cache
