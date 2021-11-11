@@ -95,6 +95,7 @@ func (c *cache) InitGC(d int) {
 	}()
 }
 
+// startGC will collect all expired key and delete it
 func (c *cache) startGC() {
 	now := time.Now()
 	for key, value := range c.data {
@@ -104,6 +105,7 @@ func (c *cache) startGC() {
 	}
 }
 
+// Set to add new cache or update existing with same type data
 func (c *cache) Set(key string, value interface{}) error {
 	if !c.init && !c.create {
 		return errors.New("error init first")
@@ -115,6 +117,7 @@ func (c *cache) Set(key string, value interface{}) error {
 	return nil
 }
 
+// Get to retrieve data based on key
 func (c *cache) Get(key string) (interface{}, error) {
 	if !c.init && !c.create {
 		return nil, errors.New("error init first")
