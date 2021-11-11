@@ -29,8 +29,10 @@ func main() {
 
 	// set data integer
 	c.Set("Tes-data-int", 1)
+	log.Println("Insert integer data 1 -> cache capacity : ", c.Cap())
 	// set data string
 	c.Set("Tes-data-string", "wow")
+	log.Println("Insert string data 'wow' -> cache capacity : ", c.Cap())
 
 	d, err := c.Get("Tes-data-int")
 	if err != nil {
@@ -45,6 +47,7 @@ func main() {
 		return
 	}
 	log.Println("Data string -> ", ds)
+	log.Println("Cache cap : ", c.Cap())
 
 	log.Println("Look after 3 second, to see if gc works")
 	time.Sleep(3 * time.Second)
@@ -59,8 +62,8 @@ func main() {
 	if err != nil {
 		log.Println("Error -> ", err)
 	}
-
 	log.Println("Data struct -> ", ds)
+	log.Println("Cache cap : ", c.Cap())
 
 }
 
@@ -72,6 +75,11 @@ func CreateInMemCache(second int) *cache {
 		create: true,
 	}
 
+}
+
+// Cap capacity
+func (c *cache) Cap() int {
+	return len(c.data)
 }
 
 // InitGC to initiate GC cycle, duration should be in milisecond
