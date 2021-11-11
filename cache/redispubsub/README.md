@@ -1,1 +1,1 @@
-My Experiment with redis-cluster library
+My Experiment with redis pub sub command 
