@@ -53,7 +53,7 @@ func clusterSlots() ([]redis.ClusterSlot, error) {
 		// First node with 1 master and 1 slave.
 		{
 			Start: 0,
-			End:   8191,
+			End:   5460,
 			Nodes: []redis.ClusterNode{{
 				Addr: ":7000", // master
 			}, {
@@ -62,8 +62,8 @@ func clusterSlots() ([]redis.ClusterSlot, error) {
 		},
 		// Second node with 1 master and 1 slave.
 		{
-			Start: 8192,
-			End:   16383,
+			Start: 5461,
+			End:   10922,
 			Nodes: []redis.ClusterNode{{
 				Addr: ":8000", // master
 			}, {
@@ -72,7 +72,7 @@ func clusterSlots() ([]redis.ClusterSlot, error) {
 		},
 		// Second node with 1 master and 1 slave.
 		{
-			Start: 8192,
+			Start: 10923,
 			End:   16383,
 			Nodes: []redis.ClusterNode{{
 				Addr: ":9000", // master
