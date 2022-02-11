@@ -22,7 +22,7 @@ func main() {
 	}
 
 	// pipeline := false
-	//playGoRedis(conn, pipeline)
+	// playGoRedis(conn, pipeline)
 	playRedigo(conn)
 
 }
