@@ -20,6 +20,10 @@ func main() {
 
 }
 
+func checkPort(port string) {
+
+}
+
 func resolveIP(netname, name string) {
 	addr, err := net.ResolveIPAddr(netname, name)
 	if err != nil {
