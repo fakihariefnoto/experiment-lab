@@ -74,10 +74,20 @@ Structure
 │   │   ├── mocks
 │   │   ├── pkg
 │   │   │   ├── config
-│   │   │   ├── fromatter
+│   │   │   ├── formatter
 │   │   │   └── response
 │   │   └── scripts
 │   └── cli
+│       ├── cmd
+│       ├── internal
+│       │   ├── model
+│       │   ├── presenter
+│       │   ├── repository
+│       │   └── usecase
+│       └── pkg
+│           ├── config
+│           ├── formatter
+│           └── response
 ├── protocol
 │   ├── gossip
 │   ├── grpc
